@@ -204,7 +204,7 @@ const Home = () => {
         </div>
         <Card className="home__right_2" isExpand={isTableExpand}>
           <CardContent>
-            <Typography color="textSecondary" gutterBottom>Aktywne Przypdaki według kraju</Typography>
+            <Typography color="textSecondary" gutterBottom>Ilość zakażeń według kraju</Typography>
             <Table countries={tableData} isExpand={isTableExpand} />
             <DropdownButton toggle={tableExpandToggle} />
           </CardContent>

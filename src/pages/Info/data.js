@@ -53,7 +53,7 @@ export const accordionsData = {
   },
   panel4a: {
     title: 'Zadbaj o siebie i innych',
-    p1: 'Nie wymagaj od siebie za dużo w trudne dni. Pogódź się z faktem, że Twoja produktywność w niektóre dni może być wyższa niż w inne.',
+    p1: 'Nie wymagaj od siebie za dużo w trudne dni. Pogódź się z faktem, że Twoja produktywność w niektóre dni może być niższa niż w inne.',
     p2: 'Spróbuj ograniczyć oglądanie, czytanie czy słuchanie wiadomości, które wywołują u Ciebie niepokój czy zmartwienie. Szukaj najnowszych informacji z zaufanych źródeł o określonych porach dnia.',
     p3: 'Pomaganie innym może być także dla Ciebie korzystne. Jeśli możesz, zaoferuj pomoc potrzebującym osobom ze swojej społeczności.',
 
