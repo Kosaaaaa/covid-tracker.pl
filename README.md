@@ -1,3 +1,16 @@
+# corona-tracker.pl by Oskar Kosobucki
+
+## Project Live:
+
+### The project was created for the Hackheros hackathon. The project aims to inform about the current course of the coronavirus pandemic in Poland and the rest of the World in the form of statistics. The website also has an information section where you can learn more about the coronavirus and how to deal with it, among others You can learn there how to take care of your mental health and physical health.
+
+#### Sources
+
+-   API - [disease.sh]: https://disease.sh/
+-   Health Informations - [who.int]: https://www.who.int/
+
+<br/>
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
