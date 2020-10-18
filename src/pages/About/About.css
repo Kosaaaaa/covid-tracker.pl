@@ -1,0 +1,17 @@
+.about__card {
+    margin: 2rem 1rem !important;
+}
+.about__title {
+    text-align: center;
+}
+.about__title span {
+    font-size: 2.5rem !important;
+}
+.about__typo {
+    font-size: 1rem !important;
+    text-align: center;
+}
+.about__authorLink {
+    font-size: 1.3rem;
+    text-decoration: none;
+}
