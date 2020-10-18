@@ -1,0 +1,7 @@
+.buttonScroll__primary {
+    color: #ffffff !important;
+    background-color: #2196f3 !important;
+}
+.buttonScroll__primary:hover {
+    background-color: #1976d2 !important;
+}
