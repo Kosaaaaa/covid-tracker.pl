@@ -6,7 +6,7 @@ import { Card } from "@material-ui/core";
 const Map = ({ countries, casesType, center, zoom }) => {
   return (
     <Card className="map">
-      <LeafletMap center={center} zoom={zoom} maxZoom={5} minZoom={1}>
+      <LeafletMap center={center} zoom={zoom} maxZoom={5} minZoom={1} worldCopyJump={true}>
         <TileLayer
           detectRetina={true}
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
