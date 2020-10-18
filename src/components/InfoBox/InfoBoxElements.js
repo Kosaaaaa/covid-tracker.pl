@@ -12,7 +12,7 @@ export const InfoCard = styled(Card)`
     margin-right: 10px;
   }
   @media screen and (max-width: 768px) {
-    margin: 1rem auto !important;
+    margin: 0.5rem auto !important;
     width: 90%;
   }
   &:before{
