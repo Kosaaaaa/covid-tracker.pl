@@ -1,0 +1,85 @@
+.info__container {
+    background-color: #f5f6fa;
+    display: grid;
+    grid-template-columns: auto 45% auto 45% auto;
+    margin: 0 auto 2rem;
+    grid-row-gap: 1.5rem;
+    grid-template-areas:
+        "header header header header header"
+        ". col-left-1 . col-right-1 ."
+        ". col-left-2 . col-right-2 .";
+}
+header {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    grid-area: header;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.1)),
+        url("../../images/covid-man-blue-fhd.jpg") center center no-repeat;
+}
+
+header > h1 {
+    font-size: 5rem;
+    color: #f5f6fa;
+}
+.info__left_1 {
+    grid-area: col-left-1;
+}
+.info__left_2 {
+    grid-area: col-left-2;
+}
+.info__right_1 {
+    grid-area: col-right-1;
+}
+.info__right_2 {
+    grid-area: col-right-2;
+}
+.info__formControl {
+    padding: 0 1rem !important;
+}
+.info__healthInfo ul > li {
+    margin: 5px 0;
+}
+
+.info__btnPrimary {
+    color: #ffffff !important;
+    background-color: #2196f3 !important;
+    width: 90%;
+    margin: 0 auto 1rem !important;
+}
+.info__btnPrimary a {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+.info__btnPrimary:hover {
+    background-color: #1976d2 !important;
+}
+.info__accordionDetails {
+    display: block !important;
+}
+.MuiAccordion-root {
+    transition: margin 500ms ease-in-out !important;
+}
+@media screen and (max-width: 768px) {
+    header {
+        background-size: cover;
+    }
+    header > h1 {
+        font-size: 3.5rem !important;
+        line-height: 100px !important;
+    }
+    .info__container {
+        overflow-x: hidden;
+        grid-template-columns: auto 95% auto !important;
+        grid-template-areas:
+            "header header header "
+            ". col-left-1 ."
+            ". col-left-2 ."
+            ". col-right-1 ."
+            ". col-right-2 ." !important;
+    }
+}
