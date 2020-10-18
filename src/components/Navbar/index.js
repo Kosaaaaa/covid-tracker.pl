@@ -16,7 +16,7 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">Corona-Tracker <Emoji label="Microbe Emoji" symbol="🦠" /> </NavLogo>
+          <NavLogo to="/">Corona-Tracker <Emoji label="Microbe Emoji" symbol="🦠" /></NavLogo>
           <MobileIcon onClick={toggle}>
             <FaBars />
           </MobileIcon>
