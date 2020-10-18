@@ -1,6 +1,8 @@
 import React from "react";
 import numeral from "numeral";
 import { Circle, Popup } from "react-leaflet";
+import iso_countries from "i18n-iso-countries";
+
 
 export const casesTypeColors = {
   cases: {
@@ -55,7 +57,7 @@ export const showDataOnMap = (data, casesType = "cases") =>
             className="info-flag"
             style={{ backgroundImage: `url(${country.countryInfo.flag})` }}
           ></div>
-          <div className="info-name">{country.country}</div>
+          <div className="info-name">{translateCountryName(country, "pl")}</div>
           <div className="info-confirmed">
             Zakażeni: {numeral(country.cases).format("0,0")}
           </div>
@@ -70,3 +72,15 @@ export const showDataOnMap = (data, casesType = "cases") =>
     </Circle>
   ));
 
+iso_countries.registerLocale(require("i18n-iso-countries/langs/pl.json"));
+export const translateCountryName = (country, language) => {
+
+  let countryName;
+  if (country.countryInfo.iso3 === null) {
+    countryName = country.country;
+  }
+  else {
+    countryName = iso_countries.getName(country.countryInfo.iso3, language);
+  }
+  return countryName;
+};
