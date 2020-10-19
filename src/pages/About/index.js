@@ -23,7 +23,7 @@ const AboutPage = () => {
             <Typography className="about__typo">Strona ma również sekcję informacyjną w której można się dowiedzieć więcej na temat koronawirusa i jak sobie z nim radzić. Można się tam równiez dowiedzieć o tym jak dbać o swoje zdrowie psychiczne oraz innych.</Typography>
             <Typography>Źródła danych: <a href="https://disease.sh/">disease.sh</a> <a href="https://www.who.int/">who.int</a></Typography>
             <Typography>Wykonanie: <a href="https://github.com/kosaaaaa" className="about__authorLink">Oskar Kosobucki</a></Typography>
-            <Typography style={{ "text-align": "center" }}>Wszystkie Prawa Zastrzeżone © {new Date().getFullYear()} - Oskar Kosobucki</Typography>
+            <Typography style={{ "text-align": "center" }}>Wszystkie Prawa Zastrzeżone © {new Date().getFullYear()}</Typography>
           </CardContent>
         </Card>
       </div>
