@@ -74,15 +74,15 @@ const AboutPage = () => {
 
               <h4>{healthInfoSymptoms.subtitle1}</h4>
               <ul>
-                {healthInfoSymptoms.ul1.map((item) => (
-                  <li>{item}</li>
+                {healthInfoSymptoms.ul1.map((item, index) => (
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
 
               <h4>{healthInfoSymptoms.subtitle2}</h4>
               <ul>
-                {healthInfoSymptoms.ul2.map((item) => (
-                  <li>{item}</li>
+                {healthInfoSymptoms.ul2.map((item, index) => (
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
             </HealthInfoContent>
@@ -93,8 +93,8 @@ const AboutPage = () => {
 
               <h4>{healthInfoPrevention.subtitle1}</h4>
               <ul>
-                {healthInfoPrevention.ul1.map((item) => (
-                  <li>{item}</li>
+                {healthInfoPrevention.ul1.map((item, index) => (
+                  <li key={index}>{item}</li>
                 ))}
               </ul>
 
@@ -161,14 +161,14 @@ const AboutPage = () => {
                 <AccordionDetails className="info__accordionDetails">
                   <Typography>{accordionsData.panel3a.subtitle1}</Typography>
                   <ul>
-                    {accordionsData.panel3a.ul1.map((item) => (
-                      <li>{item}</li>
+                    {accordionsData.panel3a.ul1.map((item, index) => (
+                      <li key={index}>{item}</li>
                     ))}
                   </ul>
                   <Typography>{accordionsData.panel3a.subtitle2}</Typography>
                   <ul>
-                    {accordionsData.panel3a.ul2.map((item) => (
-                      <li>{item}</li>
+                    {accordionsData.panel3a.ul2.map((item, index) => (
+                      <li key={index}>{item}</li>
                     ))}
                   </ul>
                 </AccordionDetails>
