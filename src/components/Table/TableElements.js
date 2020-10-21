@@ -5,7 +5,7 @@ export const TableWrapper = styled.div`
   overflow: scroll;
   color: #6a5d5d;
   background-color: white;
-  height: ${({ isExpand }) => (isExpand ? '300px' : '100px')};
+  height: ${({ isexpand }) => (isexpand ? '300px' : '100px')};
 
   transition: all 0.5s ease-in-out;
 `;
