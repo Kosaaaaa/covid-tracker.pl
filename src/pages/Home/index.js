@@ -57,6 +57,7 @@ const Home = () => {
           const countries = data.map((country) => ({
             name: country.country,
             value: country.countryInfo.iso3,
+            polishName: iso_countries.getName(country.countryInfo.iso3, "pl"),
           }));
           let sortedData = sortData(data);
           setCountries(countries);
@@ -142,8 +143,8 @@ const Home = () => {
                 >
                   <MenuItem value="worldwide">Cały Świat</MenuItem>
                   <MenuItem value="POL">Polska</MenuItem>
-                  {countries.map((country) => (
-                    <MenuItem value={country.value}>{iso_countries.getName(country.value, "pl")}</MenuItem>
+                  {countries.map((country, index) => (
+                    <MenuItem value={country.value} key={index}>{country.polishName}</MenuItem>
                   ))}
                 </Select>
               </FormControl>
@@ -175,7 +176,7 @@ const Home = () => {
           <InfoBox
             onClick={(e) => setCasesType("cases")}
             title="Zakażenia Dzisiaj"
-            isRed
+            isred
             active={casesType === "cases"}
             cases={prettyPrintStat(countryInfo.todayCases)}
             total={numeral(countryInfo.cases).format("0.0a")} />
@@ -189,7 +190,7 @@ const Home = () => {
           <InfoBox
             onClick={(e) => setCasesType("deaths")}
             title="Zgony Dzisiaj"
-            isRed
+            isred
             active={casesType === "deaths"}
             cases={prettyPrintStat(countryInfo.todayDeaths)}
             total={numeral(countryInfo.deaths).format("0.0a")}
@@ -203,10 +204,10 @@ const Home = () => {
             zoom={mapZoom}
           />
         </div>
-        <Card className="home__right_2" isExpand={isTableExpand}>
+        <Card className="home__right_2" isexpand={isTableExpand}>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>Ilość zakażeń według kraju</Typography>
-            <Table countries={tableData} isExpand={isTableExpand} />
+            <Table countries={tableData} isexpand={isTableExpand} />
             <DropdownButton toggle={tableExpandToggle} />
           </CardContent>
         </Card>
