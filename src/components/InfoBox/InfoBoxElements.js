@@ -19,7 +19,7 @@ export const InfoCard = styled(Card)`
     content: "";
     height: ${({ active }) => (active ? '10px' : '0')};
     width: 100%;
-    background-color: ${({ isRed }) => (isRed ? '#ff0000' : '#adff2f')};
+    background-color: ${({ isred }) => (isred ? '#ff0000' : '#adff2f')};
     left: 0;
     position: relative;
     display: block;
@@ -31,7 +31,7 @@ export const H2 = styled.h2`
   font-weight: 600;
   font-size: 1.75rem;
   margin-bottom: 0.5rem;
-  color:${({ isRed }) => (isRed ? '#cc1034' : '#90ee90')};
+  color:${({ isred }) => (isred ? '#cc1034' : '#90ee90')};
 
 
 `;
