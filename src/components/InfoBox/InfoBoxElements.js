@@ -8,6 +8,7 @@ export const Title = styled(Typography)`
 export const InfoCard = styled(Card)`
   flex: 1;
   max-height: 200px;
+  text-align: right;
   &:not(:last-child) {
     margin-right: 10px;
   }
@@ -30,15 +31,23 @@ export const InfoCard = styled(Card)`
 export const H2 = styled.h2`
   font-weight: 600;
   font-size: 1.75rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   color:${({ isred }) => (isred ? '#cc1034' : '#90ee90')};
 
+  @media screen and (max-width: 991px) {
+    font-size: 1.55rem;
+  }
 
 `;
 
 export const InfoTotal = styled(Typography)`
-  color: #6c757d;
   font-weight: 700 !important;
-  font-size: 0.8rem !important;
-  margin-top: 15px !important;
+  font-size: 0.9rem !important;
+`;
+
+export const InfoPrecise = styled(Typography)`
+  font-weight: 700 !important;
+  font-size: 0.9rem !important;
+  color:${({ isred }) => (isred ? '#cc1034' : '#90ee90')} !important;
+
 `;

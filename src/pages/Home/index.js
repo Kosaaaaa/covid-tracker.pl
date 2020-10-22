@@ -179,13 +179,16 @@ const Home = () => {
             isred
             active={casesType === "cases"}
             cases={prettyPrintStat(countryInfo.todayCases)}
-            total={numeral(countryInfo.cases).format("0.0a")} />
+            total={numeral(countryInfo.cases).format("0.0a")}
+            casesPrecisely={countryInfo.todayCases}
+          />
           <InfoBox
             onClick={(e) => setCasesType("recovered")}
             title="Wyleczeni Dzisiaj"
             active={casesType === "recovered"}
             cases={prettyPrintStat(countryInfo.todayRecovered)}
             total={numeral(countryInfo.recovered).format("0.0a")}
+            casesPrecisely={countryInfo.todayRecovered}
           />
           <InfoBox
             onClick={(e) => setCasesType("deaths")}
@@ -194,6 +197,7 @@ const Home = () => {
             active={casesType === "deaths"}
             cases={prettyPrintStat(countryInfo.todayDeaths)}
             total={numeral(countryInfo.deaths).format("0.0a")}
+            casesPrecisely={countryInfo.todayDeaths}
           />
         </div>
         <div className="home__right_1">
