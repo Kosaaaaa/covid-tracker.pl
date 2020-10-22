@@ -77,15 +77,8 @@ export const showDataOnMap = (data, casesType = "cases") =>
     </Circle>
   ));
 
-iso_countries.registerLocale(require("i18n-iso-countries/langs/pl.json"));
-export const translateCountryName = (country, language) => {
 
-  let countryName;
-  if (country.countryInfo.iso3 === null) {
-    countryName = country.country;
-  }
-  else {
-    countryName = iso_countries.getName(country.countryInfo.iso3, language);
-  }
-  return countryName;
+export const translateCountryName = (country, language) => {
+  iso_countries.registerLocale(require("i18n-iso-countries/langs/pl.json"));
+  return country.countryInfo.iso3 ? iso_countries.getName(country.countryInfo.iso3, language) : country.country;
 };
