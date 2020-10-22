@@ -127,13 +127,11 @@ const AboutPage = () => {
                   <Typography><Emoji symbol="☀️" label="Sun emoji" />{accordionsData.panel1a.title}</Typography>
                 </AccordionSummary>
                 <AccordionDetails className="info__accordionDetails">
-                  <Typography >
-                    <Typography>{accordionsData.panel1a.p1}</Typography>
-                    <br />
-                    <Typography>{accordionsData.panel1a.p2}</Typography>
-                    <br />
-                    <Typography>{accordionsData.panel1a.p3}</Typography>
-                  </Typography>
+                  <Typography>{accordionsData.panel1a.p1}</Typography>
+                  <br />
+                  <Typography>{accordionsData.panel1a.p2}</Typography>
+                  <br />
+                  <Typography>{accordionsData.panel1a.p3}</Typography>
                 </AccordionDetails>
               </Accordion>
               <Accordion>
