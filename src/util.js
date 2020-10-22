@@ -36,7 +36,11 @@ export const sortData = (data) => {
   });
   return sortedData;
 };
-
+export const sortDataByPolish = (data) => {
+  let sortedData = [...data];
+  sortedData.sort((a, b) => a.polishName.localeCompare(b.polishName))
+  return sortedData;
+};
 export const prettyPrintStat = (stat) =>
   stat ? `+${numeral(stat).format("0.0a")}` : "+0";
 

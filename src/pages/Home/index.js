@@ -7,7 +7,7 @@ import Map from '../../components/Map';
 import Table from '../../components/Table';
 import DropdownButton from '../../components/DropdownButton';
 import CookieSnackbar from '../../components/CookieSnackbar';
-import { sortData, prettyPrintStat } from '../../util';
+import { sortData, prettyPrintStat, sortDataByPolish } from '../../util';
 import numeral from "numeral";
 import './home.css';
 import iso_countries from "i18n-iso-countries";
@@ -56,11 +56,11 @@ const Home = () => {
         .then((data) => {
           const countries = data.map((country) => ({
             name: country.country,
-            value: country.countryInfo.iso3,
-            polishName: iso_countries.getName(country.countryInfo.iso3, "pl"),
+            value: country.countryInfo.iso3 ? country.countryInfo.iso3 : country.country,
+            polishName: iso_countries.getName(country.countryInfo.iso3, "pl") ? iso_countries.getName(country.countryInfo.iso3, "pl") : country.country,
           }));
           let sortedData = sortData(data);
-          setCountries(countries);
+          setCountries(sortDataByPolish(countries));
           setMapCountries(data);
           setTableData(sortedData);
         });
