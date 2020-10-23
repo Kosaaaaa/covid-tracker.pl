@@ -80,7 +80,9 @@ const Home = () => {
       countryCode === "worldwide"
         ? "https://disease.sh/v3/covid-19/all"
         : `https://disease.sh/v3/covid-19/countries/${countryCode}`;
-    await fetch(url)
+    await fetch(url, {
+      cache: 'no-store',
+    })
       .then((response) => response.json())
       .then((data) => {
         setInputCountry(countryCode);
