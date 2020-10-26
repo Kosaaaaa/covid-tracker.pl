@@ -6,7 +6,7 @@ export const TableWrapper = styled.div`
   color: #6a5d5d;
   background-color: white;
   height: ${({ isexpand }) => (isexpand ? '300px' : '100px')};
-
+  overflow-x: hidden;
   transition: all 0.5s ease-in-out;
 `;
 
