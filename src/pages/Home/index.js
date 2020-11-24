@@ -179,7 +179,7 @@ const Home = () => {
             onClick={(e) => setCasesType("cases")}
             title="Zakażenia Dzisiaj"
             isred
-            active={casesType === "cases"}
+            active={casesType === "cases" ? 1 : 0}
             cases={prettyPrintStat(countryInfo.todayCases)}
             total={numeral(countryInfo.cases).format("0.0a")}
             casesPrecisely={countryInfo.todayCases}
@@ -187,7 +187,7 @@ const Home = () => {
           <InfoBox
             onClick={(e) => setCasesType("recovered")}
             title="Wyleczeni Dzisiaj"
-            active={casesType === "recovered"}
+            active={casesType === "recovered" ? 1 : 0}
             cases={prettyPrintStat(countryInfo.todayRecovered)}
             total={numeral(countryInfo.recovered).format("0.0a")}
             casesPrecisely={countryInfo.todayRecovered}
@@ -196,7 +196,7 @@ const Home = () => {
             onClick={(e) => setCasesType("deaths")}
             title="Zgony Dzisiaj"
             isred
-            active={casesType === "deaths"}
+            active={casesType === "deaths" ? 1 : 0}
             cases={prettyPrintStat(countryInfo.todayDeaths)}
             total={numeral(countryInfo.deaths).format("0.0a")}
             casesPrecisely={countryInfo.todayDeaths}
@@ -210,7 +210,7 @@ const Home = () => {
             zoom={mapZoom}
           />
         </div>
-        <Card className="home__right_2" isexpand={isTableExpand}>
+        <Card className="home__right_2" isexpand={isTableExpand ? 1 : 0}>
           <CardContent>
             <Typography color="textSecondary" gutterBottom>Ilość zakażeń według kraju</Typography>
             <Table countries={tableData} isexpand={isTableExpand} />
