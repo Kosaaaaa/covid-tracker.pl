@@ -18,7 +18,8 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^3.4.4",
     "react-scroll": "^1.8.1",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "yarn.lock": "^0.0.1-security"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -40,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "yarn-audit-fix": "^3.2.12"
   }
 }
