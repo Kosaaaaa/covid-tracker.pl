@@ -1,7 +1,7 @@
 import React from 'react'
 import { TableWrapper, TableRow, TableCell } from './TableElements';
 import numeral from "numeral";
-import { translateCountryName } from '../../util';
+import { translateCountryName } from '../../utils/util';
 
 const Table = ({ countries, isexpand }) => {
 

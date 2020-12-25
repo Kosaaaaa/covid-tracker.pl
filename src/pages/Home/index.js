@@ -7,7 +7,7 @@ import Map from '../../components/Map';
 import Table from '../../components/Table';
 import DropdownButton from '../../components/DropdownButton';
 import CookieSnackbar from '../../components/CookieSnackbar';
-import { sortData, prettyPrintStat, sortDataByPolish } from '../../util';
+import { sortData, prettyPrintStat, sortDataByPolish } from '../../utils/util';
 import numeral from "numeral";
 import './home.css';
 import iso_countries from "i18n-iso-countries";
