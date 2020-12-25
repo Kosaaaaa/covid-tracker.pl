@@ -82,3 +82,12 @@ export const translateCountryName = (country, language) => {
   iso_countries.registerLocale(require("i18n-iso-countries/langs/pl.json"));
   return country.countryInfo.iso3 ? iso_countries.getName(country.countryInfo.iso3, language) : country.country;
 };
+
+export const stringToBoolean = (value) => {
+  value = String(value);
+  switch (value.toLowerCase().trim()) {
+    case 'true': case '1': return true;
+    case 'false': case '0': return false;
+    default: return Boolean(value);
+  }
+};

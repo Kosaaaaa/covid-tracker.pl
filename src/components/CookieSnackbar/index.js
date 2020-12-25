@@ -1,22 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { Typography } from '@material-ui/core';
 import { SnackbarStyled, ButtonStyled } from './CookieSnackbarElement';
+import { useStateWithLocalStorage } from '../../hooks';
+import { stringToBoolean } from '../../utils/util';
 const CookieSnackbar = () => {
-  const [snackbarOpen, setSnackbarOpen] = useState(true);
-  const handleClose = (event, reason) => {
-    // if (reason === 'clickaway') {
-    //   return;
-    // }
-    setSnackbarOpen(false);
+  const [snackbarIsOpen, setSnackbarIsOpen] = useStateWithLocalStorage('snackbarIsOpen', true);
+  const handleClose = (event) => {
+    setSnackbarIsOpen(false);
   };
   return (
     <div>
-      <SnackbarStyled open={snackbarOpen} autoHideDuration={5000} onClose={handleClose} anchorOrigin={{
+      <SnackbarStyled open={stringToBoolean(snackbarIsOpen)} onClose={handleClose} anchorOrigin={{
         vertical: 'bottom',
         horizontal: 'center',
       }}>
         <React.Fragment>
-          <Typography>Ta strona kosrzysta z plików cookies, potrzebnych do lepszego działania strony. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.</Typography>
+          <Typography>Ta strona kosrzysta z plików cookies, potrzebnych do lepszego działania strony oraz do analityki. Dalsze korzystanie ze strony oznacza, że zgadzasz się na ich użycie.</Typography>
           <ButtonStyled size="medium" onClick={handleClose}>
             OK
           </ButtonStyled>
