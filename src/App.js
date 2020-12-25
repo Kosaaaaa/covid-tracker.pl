@@ -5,6 +5,12 @@ import Home from './pages/Home';
 import NotFound from './pages/NotFound';
 import About from './pages/About';
 import Info from './pages/Info';
+import firebase from 'firebase/app';
+import "firebase/analytics";
+import firebaseConfig from './utils/firebaseConfig';
+
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
 
 function App() {
   return (
